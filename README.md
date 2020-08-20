@@ -8,8 +8,7 @@
 ## Method
 어플리케이션을 이용해 수집한 해당 데이터 소유자가 해당 날에 밖에서 밥을 먹었는지, 안에서 먹었는지 확인합니다. 그날의 생활 패턴을 파악한 후 선정한 attribute (정문과의 거리, 가용 시간의 길이, 기숙사 거주 여부, 날씨, 미세먼지)를 통해 Target attribute인 점심 식사 위치 (outside/inside) 상관성을 분석합니다. 교내에서 식사한 사람의 경우, 배달을 시켜먹을 가능성이 있다고 판단합니다. 해당 target을 발견하기 위해 Classification Analysis에 기반한 model을 만들어 Target을 예측합니다.
 
-### Data
-
+## Data
 * Raw data
   - Latitude, Longitude, Elevation, Timestamp
 
@@ -20,7 +19,7 @@
   - Key, Date, Day, AvailableTime, Distance, AirScore, WeatherScore, Dorm, IOS
     - **IOS**: Label, **식사 위치 Inside/Outside**
 
-### Codes
+## Codes
 - **preprocessing.R**: Mapmywalk 앱을 통해 얻은 원본 파일의 전처리를 진행하는 코드입니다.
 
 - **data_place.R**: 각 건물마다 좌표를 지정해 구역을 설정한 후, 특정 구역으로 이동할 때마다 start point와 end point를 잡고 place에 미리 지정해둔 건물의 번호를 작성하는 코드입니다.
